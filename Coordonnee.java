@@ -33,10 +33,15 @@ public class Coordonnee  implements Comparable<Coordonnee> {
 		return this.ligne;
 		
 	}
+	//	méthode qui teste l'égalité entre deux coordonnées
 	public boolean equals(Object obj) {
+		if (obj instanceof Coordonnee) {
+			Coordonnee c = (Coordonnee) obj;
+			return (this.ligne == c.ligne && this.colonne == c.colonne);
+		}
 		return false;
-		
 	}
+	
 	public boolean voisine(Coordonnee c) {
 		return false;
 		
