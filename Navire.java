@@ -28,9 +28,15 @@ public class Navire {
 			return ("Navire(" + debut + ", " + (fin.getColonne() - debut.getColonne()) + " horizontal)");
 		return ("Navire(" + debut + ", " + (fin.getLigne() - debut.getLigne()) + " vertical"); // vertical
 	}
+
+	// retournent respectivement les coordonnées de début et de fin du navire.
+	public Coordonnee getDebut() {
+		return this.debut;
+	}
+	public Coordonnee getFin() {
+		return this.fin;
+	}
 	
-//	public Coordonnee getDebut() {...}
-//	public Coordonnee getFin() {...}
 //	public boolean contient(Coordonnee c) {...}
 //	public boolean touche(Navire n) {...}
 //	public boolean chevauche(Navire n) {...}
