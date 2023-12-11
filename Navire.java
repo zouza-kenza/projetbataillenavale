@@ -47,7 +47,17 @@ public class Navire {
 	}
 	
 //	public boolean touche(Navire n) {...}
-//	public boolean chevauche(Navire n) {...}
+//	public boolean chevauche(Navire n) {...} 
+	public boolean chevauche (Navire n){
+		for (int i = debut.getLigne();i <=fin.getLigne();i++) {
+			for (int j=debut.getColonne(); j<=fin.getColonne(); j++){
+				if (n.contient(part)){
+					return true;
+				}
+			}
+		}
+		return false ; 
+	}
 //	public boolean recoitTir(Coordonnee c) {...}
 //	public boolean estTouche(Coordonnee c) {...}
 //	public boolean estTouche() {...}
