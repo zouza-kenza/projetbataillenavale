@@ -85,8 +85,9 @@ public class Navire {
 		}
 		return false;
 	}
-//	public boolean estCoule() {...}
-
+	public boolean estCoule() {
+		return nbTouchees == partiesTouchees.length;
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
