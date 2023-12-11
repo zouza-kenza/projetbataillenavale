@@ -47,7 +47,7 @@ public class Navire {
 	}
 	
 //	public boolean touche(Navire n) {...}
-//	public boolean chevauche(Navire n) {...} 
+
 	public boolean chevauche (Navire n){
 		for (int i = debut.getLigne();i <=fin.getLigne();i++) {
 			for (int j=debut.getColonne(); j<=fin.getColonne(); j++){
