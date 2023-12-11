@@ -21,7 +21,14 @@ public class Navire {
 	}
 	
 	// méthodes :
-//	public String toString() {...}
+	
+	// retourne une représentation textuelle du navire
+	public String toString() {
+		if (this.debut.getLigne() == this.fin.getLigne()) //horizontal
+			return ("Navire(" + debut + ", " + (fin.getColonne() - debut.getColonne()) + " horizontal)");
+		return ("Navire(" + debut + ", " + (fin.getLigne() - debut.getLigne()) + " vertical"); // vertical
+	}
+	
 //	public Coordonnee getDebut() {...}
 //	public Coordonnee getFin() {...}
 //	public boolean contient(Coordonnee c) {...}
