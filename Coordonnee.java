@@ -25,6 +25,14 @@ public class Coordonnee  implements Comparable<Coordonnee> {
 		return coordonnees + (char) (this.colonne + 'A') + (this.ligne + 1);
 		
 	}
+
+	/* // Nam's version :
+	 * // retourne la coordonnée sous la forme ColonneLigne, par exemple A1. public
+	 * String toString() { return String.format("%c%d",colonne + 'A', ligne + 1); //
+	 * ligne + 1 car les indices utilisés en Java (de 0 à 25) // %d%c : format
+	 * specifier - %c pour formater un caractère et %d pour formater un entier }
+	 */
+	
 	public int getColonne() {
 		return this.colonne;
 		
