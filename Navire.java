@@ -37,7 +37,15 @@ public class Navire {
 		return this.fin;
 	}
 	
-//	public boolean contient(Coordonnee c) {...}
+	// teste si le navire contient la coordonnée spécifiée.
+	public boolean contient(Coordonnee c) {
+		if (debut.getLigne() == c.getLigne() && debut.getColonne() >= c.getColonne() && fin.getColonne() >= c.getColonne())
+			return true;
+		else if (debut.getColonne() == c.getColonne() && debut.getLigne() >= c.getLigne() && fin.getLigne() >= c.getColonne())
+			return true;
+		return false;
+	}
+	
 //	public boolean touche(Navire n) {...}
 //	public boolean chevauche(Navire n) {...}
 //	public boolean recoitTir(Coordonnee c) {...}
