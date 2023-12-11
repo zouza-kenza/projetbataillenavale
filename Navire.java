@@ -58,7 +58,25 @@ public class Navire {
 		}
 		return false ; 
 	}
-//	public boolean recoitTir(Coordonnee c) {...}
+
+	// enregistre la coordonnée spécifiée comme étant touchée.
+	public boolean recoitTir(Coordonnee c) {
+		//vérifie si la coordonnée n'existe pas dans partiesTouchees[]
+		boolean existe = false;
+		for (int i = 0; i < partiesTouchees.length; i++) {
+			if (partiesTouchees[i] != null && partiesTouchees[i].equals(c)) {
+				existe = true;
+				break;
+			}
+		}
+		if (existe == false && this.contient(c) ) {
+			partiesTouchees[nbTouchees] = c;
+			nbTouchees ++;
+			return true;
+		}
+		return false;
+	}
+	
 //	public boolean estTouche(Coordonnee c) {...}
 //	public boolean estTouche() {...}
 //	public boolean estCoule() {...}
