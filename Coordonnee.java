@@ -42,8 +42,18 @@ public class Coordonnee  implements Comparable<Coordonnee> {
 		return false;
 	}
 	
+	//	méthode qui teste si la coordonnée est voisine d'une autre coordonnée
 	public boolean voisine(Coordonnee c) {
+		if (this.colonne == c.colonne) {
+			if (this.ligne == c.ligne + 1 || this.ligne == c.ligne - 1)
+				return true;
+		}
+		if (this.ligne == c.ligne) {
+			if (this.colonne == c.colonne + 1 || this.colonne == c.colonne - 1)
+				return true;
+		}
 		return false;
+	}
 		
 	}
 	@Override
