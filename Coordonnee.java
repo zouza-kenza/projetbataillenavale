@@ -49,6 +49,9 @@ public class Coordonnee  implements Comparable<Coordonnee> {
 		}
 		return false;
 	}
+	//public boolean equals(Object obj) {
+	//	return (obj instanceof Coordonnee) && (compareTo((Coordonnee) obj) == 0);
+	//}
 	
 	//	méthode qui teste si la coordonnée est voisine d'une autre coordonnée
 	public boolean voisine(Coordonnee c) {
@@ -66,8 +69,12 @@ public class Coordonnee  implements Comparable<Coordonnee> {
 	}
 	@Override
 	public int compareTo(Coordonnee c) {
-		// TODO Auto-generated method stub
-		return 0;
+		if ((this.ligne == c.ligne && this.colonne < c.colonne) || ((this.ligne < c.ligne) && (this.colonne==c.colonne)))
+				return -1;
+			else if (this.ligne == c.ligne && this.colonne == c.colonne)
+				return 0;
+			else
+				return 1;
 	}
 	
 	
