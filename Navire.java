@@ -78,7 +78,13 @@ public class Navire {
 	}
 	
 //	public boolean estTouche(Coordonnee c) {...}
-//	public boolean estTouche() {...}
+	
+	public boolean estTouche() {
+		if (nbTouchees>0) {
+		return true ;
+		}
+		return false;
+	}
 //	public boolean estCoule() {...}
 
 	public static void main(String[] args) {
